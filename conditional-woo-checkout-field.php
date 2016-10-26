@@ -1,17 +1,17 @@
 <?php
    /*
    Plugin Name: Conditional Woo Checkout Field
-   Plugin URI: https://surpriseazwebservices.com/plugins/conditional-woo-checkout-field/
+   Plugin URI: https://conditionalcheckoutfields.com/
    Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N2TYAV69U9CP4
    Description: Display a custom field at checkout in your WooCommerce store if a certain product is in the customer's cart.
-   Version: 1.0.11
+   Version: 1.0.12
    Author: Scott DeLuzio
-   Author URI: https://surpriseazwebservices.com
+   Author URI: https://scottdeluzio.com
    License: GPL2
    Text Domain: conditional-woo-checkout-field
    */
    
-	/*  Copyright 2014  Scott DeLuzio  (email : scott (at) surpriseazwebservices.com)
+	/*  Copyright 2014  Scott DeLuzio  (email : me (at) scottdeluzio.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -30,7 +30,7 @@
 add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'wc_fields_action_links' );
 
 function wc_fields_action_links( $links ) {
-   $links[] = '<a href="https://surpriseazwebservices.com/plugins/conditional-woo-checkout-field-pro/" target="_blank">Upgrade to PRO</a>';
+   $links[] = '<a href="https://conditionalcheckoutfields.com/downloads/conditional-woo-checkout-field-pro/" target="_blank">Upgrade to PRO</a>';
    return $links;
 }
 /* Load Text Domain */
