@@ -1,10 +1,10 @@
 === Conditional Woo Checkout Field ===
 Contributors: scott.deluzio
-Tags: plugin, woocommerce, checkout, custom, customer, input, input field
+Tags: plugin, woocommerce, checkout, custom, input, input field
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N2TYAV69U9CP4
 Requires at least: 3.1.0
-Tested up to: 4.6.1
-Stable tag: 1.0.12
+Tested up to: 4.9.6
+Stable tag: 1.0.14
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,19 @@ Display a custom field at checkout in your WooCommerce store if a certain produc
 == Description ==
 If you sell a product through your WooCommerce store that requires you to collect some additional information from your customers before they complete their purchase, this plugin is exactly what you need.
 
-This plugin lets you configure an additional field to be displayed at checkout for your customer to fill out provided a certain product is in the customer's cart. The plugin allows you to customize this additional field's
+**Pro Version Now Available**
+[Update to Pro](https://conditionalcheckoutfields.com/downloads/conditional-woo-checkout-field-pro/) to get even more features.
+
+* Display an unlimited number of custom conditional fields at checkout (free version only allows one).
+* Display each conditional field on an unlimited number of products, product variations, or categories of products (free version only allows the field to display for one product).
+* Increased variety of available input fields including: Text box, multi-line text area, drop-down/select menu, country list, state list, check boxes, password, radio buttons, and date picker.
+* Bonus: Easily edit any of the default WooCommerce checkout fields without having to edit any code.
+
+Get the pro version by [clicking here](https://conditionalcheckoutfields.com/downloads/conditional-woo-checkout-field-pro/).
+
+This plugin lets you configure an additional field to be displayed at checkout for your customer to fill out provided a certain product is in the customer's cart.
+
+The plugin allows you to customize this additional field's
 
 * Title
 * Input type (text box, text area, or select/drop down menu)
@@ -25,18 +37,8 @@ This plugin lets you configure an additional field to be displayed at checkout f
 
 This plugin requires your site to have WooCommerce installed in order to work. It is not compatible with other e-commerce plugins.
 
-**Pro Version Now Available**
-[Update to Pro](https://conditionalcheckoutfields.com/downloads/conditional-woo-checkout-field-pro/) to get even more features.
-
-* Display an unlimited number of custom conditional fields at checkout (free version only allows one).
-* Display each conditional field on an unlimited number of products (free version only allows the field to display for one product).
-* Increased variety of available input fields including: Text box, multi-line text area, drop-down/select menu, country list, state list, check boxes, password, radio buttons, and date picker.
-* Bonus: Easily edit any of the default WooCommerce checkout fields without having to edit any code.
-
-Get the pro version by [clicking here](https://conditionalcheckoutfields.com/downloads/conditional-woo-checkout-field-pro/).
-
 == Installation ==
-1. Download archive and unzip in wp-content/plugins or install via Plugins – Add New.
+1. Download archive and unzip in wp-content/plugins or install via Plugins ï¿½ Add New.
 2. Activate the plugin through the Plugins menu in WordPress.
 3. In your WordPress dashboard, click on WooCommerce > Conditional Field.
 4. Enter the information for your custom field, and click Save Changes.
@@ -72,6 +74,14 @@ A few examples include:
 6. Custom error message displayed after the customer attempts to checkout without completing your required field.
 
 == Changelog ==
+= 1.0.14 =
+* Fix: Minor error on checkout page caused notice to display due to incorrect retrieval method of the product ID.
+
+= 1.0.13 =
+* Improved: File structure improved for easier debugging and future updates.
+* New: Included wpml-config.xml
+* Added: Dismissable update and rating notices.
+
 = 1.0.11 =
 * Minor Update
 
@@ -109,5 +119,7 @@ A few examples include:
 * Initial release.
 
 == Upgrade Notice ==
-= 1.0.11 =
-* Minor Update
+= 1.0.13 =
+* Improved: File structure improved for easier debugging and future updates.
+* New: Included wpml-config.xml
+* Added: Dismissable update and rating notices.

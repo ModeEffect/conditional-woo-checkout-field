@@ -1,138 +1,162 @@
-# Copyright (C) 2014 Conditional Woo Checkout Field
-# This file is distributed under the same license as the Conditional Woo Checkout Field package.
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Conditional Woo Checkout Field 1.0\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/conditional-woo-checkout-"
-"field\n"
-"POT-Creation-Date: 2014-06-04 20:01:50+00:00\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Conditional Woo Checkout Field\n"
+"POT-Creation-Date: 2017-03-28 13:24-0700\n"
+"PO-Revision-Date: 2017-03-28 13:23-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.8.12\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: conditional-woo-checkout-field.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: options.php:19
+#: includes/options.php:8
 msgid "Conditional Checkout Field"
 msgstr ""
 
-#: options.php:20
+#: includes/options.php:9
 msgid ""
 "Enter in the details for a field to be displayed at checkout provided a "
 "certain product is in the cart."
 msgstr ""
 
-#: options.php:27
+#: includes/options.php:16
 msgid "Product ID"
 msgstr ""
 
-#: options.php:28
+#: includes/options.php:17
 msgid "Title"
 msgstr ""
 
-#: options.php:29
+#: includes/options.php:18
 msgid "Input Type"
 msgstr ""
 
-#: options.php:30
+#: includes/options.php:19
 msgid "Field Label"
 msgstr ""
 
-#: options.php:31
+#: includes/options.php:20
 msgid "Placeholder Text"
 msgstr ""
 
-#: options.php:32
+#: includes/options.php:21
 msgid "Class"
 msgstr ""
 
-#: options.php:33
+#: includes/options.php:22
 msgid "Required Field?"
 msgstr ""
 
-#: options.php:34
+#: includes/options.php:23
 msgid "Error Message"
 msgstr ""
 
-#: options.php:35
+#: includes/options.php:24
 msgid "Add to Order Email/Invoice?"
 msgstr ""
 
-#: options.php:44
+#: includes/options.php:33
 msgid "Text Box"
 msgstr ""
 
-#: options.php:45
+#: includes/options.php:34
 msgid "Text Area"
 msgstr ""
 
-#: options.php:46
+#: includes/options.php:35
 msgid "Select Menu"
 msgstr ""
 
-#: options.php:49
+#: includes/options.php:38
 msgid "Select Options"
 msgstr ""
 
-#: options.php:56
+#: includes/options.php:45
 msgid "Yes"
 msgstr ""
 
-#: options.php:57
+#: includes/options.php:46
 msgid "No"
 msgstr ""
 
-#: options.php:61
+#: includes/options.php:50
 msgid "Order Email"
 msgstr ""
 
-#: options.php:62
+#: includes/options.php:51
 msgid "Order Invoice"
 msgstr ""
 
-#: options.php:75
+#: includes/options.php:58
+msgid "Enjoy this plugin? Give it a 5 star rating."
+msgstr ""
+
+#: includes/options.php:62
+msgid "Upgrade to Pro!"
+msgstr ""
+
+#: includes/options.php:64
+msgid ""
+"Upgrade to have unlimited conditional fields, and make each field display "
+"for any number of products."
+msgstr ""
+
+#: includes/options.php:65
+msgid ""
+"Bonus - Pro version comes with an editor for the default checkout fields. "
+"Choose whether to make a field required, hide it, and more."
+msgstr ""
+
+#: includes/options.php:66
+msgid "Upgrade Now!"
+msgstr ""
+
+#: includes/options.php:73
 msgid "Show Help"
 msgstr ""
 
-#: options.php:76
+#: includes/options.php:74
 msgid "Hide Help"
 msgstr ""
 
-#: options.php:78
+#: includes/options.php:76
 msgid "How to use these fields:"
 msgstr ""
 
-#: options.php:78
+#: includes/options.php:76
 msgid "All fields are required unless otherwise indicated below."
 msgstr ""
 
-#: options.php:80
+#: includes/options.php:78
 msgid "Product ID:"
 msgstr ""
 
-#: options.php:82
+#: includes/options.php:83
+#, php-format
 msgid ""
-"This is the ID number of the product, which if it is in the customer's cart, "
-"should trigger the custom field to display at checkout. You can get the ID "
-"number by viewing your"
+"This is the ID number of the product, which if it is in the cart, should "
+"trigger the custom field to display at checkout. You can get the ID number "
+"by viewing your <a href=\"%s\">product admin page</a> and hovering your "
+"mouse over the product. The ID number will be displayed under the product "
+"name, next to the Edit links."
 msgstr ""
 
-#: options.php:82
-msgid "product admin page"
-msgstr ""
-
-#: options.php:82
-msgid ""
-", and hovering your mouse over the product. The ID number will be displayed "
-"under the product name, next to the Edit links."
-msgstr ""
-
-#: options.php:85
+#: includes/options.php:89
 msgid "Title:"
 msgstr ""
 
-#: options.php:87
+#: includes/options.php:91
 msgid ""
 "It is important that you do not change this after orders are made using this "
 "custom field. If changed, older orders may not show the customer's "
@@ -147,11 +171,11 @@ msgid ""
 "using an outdated field title."
 msgstr ""
 
-#: options.php:90
+#: includes/options.php:94
 msgid "Input Type:"
 msgstr ""
 
-#: options.php:92
+#: includes/options.php:96
 msgid ""
 "Identify what you would like the customer to use as the input field. Short "
 "responses, such as a name, date, etc. might only need a text box. Longer "
@@ -160,22 +184,22 @@ msgid ""
 "option on each line (hit enter on your keyboard after each option)."
 msgstr ""
 
-#: options.php:95
+#: includes/options.php:99
 msgid "Field Label (optional but recommended):"
 msgstr ""
 
-#: options.php:97
+#: includes/options.php:101
 msgid ""
 "Use this to instruct the customer what to enter in the field. This is the "
 "text that is in between the Title and the input field. If the field is set "
 "to be required, a red asterisk (*) by default will show next to this label."
 msgstr ""
 
-#: options.php:100
+#: includes/options.php:104
 msgid "Placeholder Text (optional):"
 msgstr ""
 
-#: options.php:102
+#: includes/options.php:106
 msgid ""
 "Often times using placeholder text is a useful way to guide customers to "
 "enter information in the correct format. The information entered here will "
@@ -183,21 +207,21 @@ msgid ""
 "\"greyed out\" until the customer enters some information in the field."
 msgstr ""
 
-#: options.php:105
+#: includes/options.php:109
 msgid "Class (optional):"
 msgstr ""
 
-#: options.php:107
+#: includes/options.php:111
 msgid ""
 "If you wish to edit the CSS class of the input field, use this to enter the "
 "class."
 msgstr ""
 
-#: options.php:110
+#: includes/options.php:114
 msgid "Required Field?:"
 msgstr ""
 
-#: options.php:112
+#: includes/options.php:116
 msgid ""
 "Simply indicates whether or not the customer must enter information into the "
 "field. If required, a red asterisk will be placed immediately following the "
@@ -205,11 +229,11 @@ msgid ""
 "empty."
 msgstr ""
 
-#: options.php:115
+#: includes/options.php:119
 msgid "Error Message (optional unless required field is set to Yes):"
 msgstr ""
 
-#: options.php:117
+#: includes/options.php:121
 msgid ""
 "If the field is set to be required, this will be the error message displayed "
 "to the customer if they do not enter any information. Use this to give the "
@@ -220,23 +244,31 @@ msgid ""
 "customer any useful information on how to clear this error."
 msgstr ""
 
-#: options.php:120
+#: includes/options.php:124
 msgid "Add to Order Email/Invoice:"
 msgstr ""
 
-#: options.php:122
+#: includes/options.php:129
+#, php-format
 msgid ""
 "If you want the information the customer enters to be included in their "
 "order emails or order invoice check the appropriate boxes. The order invoice "
-"is found in the customer's"
+"is found in the customers <a href=\"%s\">My Account</a> page on your website."
 msgstr ""
 
-#: options.php:122
-msgid "My Account"
+#: includes/update-notice.php:7
+#, php-format
+msgid ""
+"<a href=\"%s\">Click here</a> to upgrade Conditional Checkout Field to Pro! "
+"Get an unlimited number of checkout fields, duplicate checkout fields based "
+"on product quantity in the customer's cart, and more!"
 msgstr ""
 
-#: options.php:122
-msgid "page on your website."
+#: includes/update-notice.php:34
+#, php-format
+msgid ""
+"Could we ask for a 5 star review of Conditional Checkout Field? It would be "
+"greatly appreciated! <a href=\"%s\">Click here</a> to leave a review."
 msgstr ""
 
 #. Plugin Name of the plugin/theme
@@ -244,7 +276,7 @@ msgid "Conditional Woo Checkout Field"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "http://oizuled.com/wordpress-plugins/conditional-woo-checkout-field/"
+msgid "https://conditionalcheckoutfields.com/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -258,5 +290,5 @@ msgid "Scott DeLuzio"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://oizuled.com"
+msgid "https://scottdeluzio.com"
 msgstr ""
