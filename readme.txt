@@ -1,4 +1,4 @@
-=== Conditional Woo Checkout Field ===
+=== Conditional WooCommerce Checkout Field ===
 Contributors: scott.deluzio
 Tags: plugin, woocommerce, checkout, custom, input, input field
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N2TYAV69U9CP4
