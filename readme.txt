@@ -4,7 +4,7 @@ Tags: plugin, woocommerce, checkout, custom, input, input field
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N2TYAV69U9CP4
 Requires at least: 3.1.0
 Tested up to: 4.9.6
-Stable tag: 1.0.14
+Stable tag: 1.0.15
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,9 @@ A few examples include:
 6. Custom error message displayed after the customer attempts to checkout without completing your required field.
 
 == Changelog ==
+= 1.0.15 =
+* Fix: Error on activation with upgrade notices in some cases.
+
 = 1.0.14 =
 * Fix: Minor error on checkout page caused notice to display due to incorrect retrieval method of the product ID.
 
@@ -119,7 +122,5 @@ A few examples include:
 * Initial release.
 
 == Upgrade Notice ==
-= 1.0.13 =
-* Improved: File structure improved for easier debugging and future updates.
-* New: Included wpml-config.xml
-* Added: Dismissable update and rating notices.
+= 1.0.15 =
+* Fix: Error on activation with upgrade notices in some cases.
