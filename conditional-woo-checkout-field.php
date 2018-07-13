@@ -59,3 +59,4 @@ include( CWCF_PLUGIN_DIR . '/includes/check-cart.php' );
 include( CWCF_PLUGIN_DIR . '/includes/settings.php' );
 include( CWCF_PLUGIN_DIR . '/includes/save-display-customer-input.php' );
 include( CWCF_PLUGIN_DIR . '/includes/update-notice.php' );
+include( CWCF_PLUGIN_DIR . '/includes/upsell-metabox.php' );
