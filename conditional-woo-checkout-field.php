@@ -1,30 +1,34 @@
 <?php
-   /*
-   Plugin Name: Conditional WooCommerce Checkout Field
-   Plugin URI: https://conditionalcheckoutfields.com/
-   Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N2TYAV69U9CP4
-   Description: Display a custom field at checkout in your WooCommerce store if a certain product is in the customer's cart.
-   Version: 1.0.15
-   Author: Scott DeLuzio
-   Author URI: https://scottdeluzio.com
-   License: GPL2
-   Text Domain: conditional-woo-checkout-field
-   */
+	/*
+	Plugin Name: Conditional WooCommerce Checkout Field
+	Plugin URI: https://conditionalcheckoutfields.com/
+	Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N2TYAV69U9CP4
+	Description: Display a custom field at checkout in your WooCommerce store if a certain product is in the customer's cart.
+	Requires at least: 3.1.0
+	Tested up to: 4.9.7
+	Version: 1.0.16
+	WC requires at least: 3.0.0
+	WC tested up to: 3.4.3
+	Author: Scott DeLuzio
+	Author URI: https://scottdeluzio.com
+	License: GPL2
+	Text Domain: conditional-woo-checkout-field
+	*/
 
 	/*  Copyright 2014  Scott DeLuzio  (email : me (at) scottdeluzio.com)
 
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License, version 2, as
-    published by the Free Software Foundation.
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License, version 2, as
+	published by the Free Software Foundation.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+	You should have received a copy of the GNU General Public License
+	along with this program; if not, write to the Free Software
+	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 	*/
 
 add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'wc_fields_action_links' );
