@@ -74,6 +74,9 @@ A few examples include:
 6. Custom error message displayed after the customer attempts to checkout without completing your required field.
 
 == Changelog ==
+= 1.0.17 =
+* Updated WooCommerce compatibility.
+
 = 1.0.16 =
 * Fix: Incorrectly referenced Order ID number in save/display field data.
 * Added: Upgrade notifications in order and product screens.
@@ -126,6 +129,5 @@ A few examples include:
 * Initial release.
 
 == Upgrade Notice ==
-= 1.0.16 =
-* Fix: Incorrectly referenced Order ID number in save/display field data.
-* Added: Upgrade notifications in order and product screens.
+= 1.0.17 =
+* Updated WooCommerce compatibility.
