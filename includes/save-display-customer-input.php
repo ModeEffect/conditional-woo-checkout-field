@@ -8,11 +8,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_action('woocommerce_checkout_process', 'conditional_checkout_field_process');
 
 function conditional_checkout_field_process() {
-	$pid = get_option('oizuled_conditional_fields_pid');
+	$pid = cwcf_get_product_id();
 	$check_in_cart = conditional_product_in_cart($pid);
-    // Check if the field is required and set, if not then show an error message.
-    if ( $check_in_cart == true && get_option('oizuled_conditional_fields_required') == 'yes' && !$_POST['conditional_field'] ) {
-			wc_add_notice( __( get_option('oizuled_conditional_fields_requiredtext') ), 'error' );
+	// Check if the field is required and set, if not then show an error message.
+	if ( true == $check_in_cart && 'yes' == cwcf_required_field() && !$_POST['conditional_field'] ) {
+			wc_add_notice( cwcf_required_error_text(), 'error' );
 	}
 }
 
@@ -23,7 +23,7 @@ add_action( 'woocommerce_checkout_update_order_meta', 'conditional_checkout_fiel
 
 function conditional_checkout_field_update_order_meta( $order_id ) {
     if ( !empty( $_POST['conditional_field'] ) ) {
-        update_post_meta( $order_id, get_option('oizuled_conditional_fields_title'), sanitize_text_field( $_POST['conditional_field'] ) );
+        update_post_meta( $order_id, cwcf_conditional_field_title(), sanitize_text_field( $_POST['conditional_field'] ) );
     }
 }
 
@@ -33,9 +33,9 @@ function conditional_checkout_field_update_order_meta( $order_id ) {
 add_action( 'woocommerce_email_after_order_table', 'conditional_order_meta_keys', 15, 2 );
 
 function conditional_order_meta_keys($order) {
-	if (get_option('oizuled_conditional_fields_addemail') == 'yes') {
-		if (get_post_meta( $order->get_id(), get_option('oizuled_conditional_fields_title'), true )) {
-			echo '<br /><strong>' . get_option('oizuled_conditional_fields_title') . ':</strong><br />' . get_post_meta( $order->get_id(), get_option('oizuled_conditional_fields_title'), true );
+	if ( 'yes' == cwcf_add_email() ) {
+		if ( get_post_meta( $order->get_id(), cwcf_conditional_field_title(), true ) ) {
+			echo '<br /><strong>' . cwcf_conditional_field_title() . ':</strong><br />' . get_post_meta( $order->get_id(), cwcf_conditional_field_title(), true );
 		}
 	}
 }
@@ -45,8 +45,8 @@ function conditional_order_meta_keys($order) {
  **/
 add_action( 'woocommerce_order_details_after_order_table', 'conditional_order_details_invoice' );
 function conditional_order_details_invoice($order) {
-	if (get_option('oizuled_conditional_fields_addinvoice') == 'yes') {
-		echo "<p><strong>" . get_option('oizuled_conditional_fields_title') . ":</strong><br />" . get_post_meta( $order->get_id(), get_option('oizuled_conditional_fields_title'), true ) . "</p>";
+	if ( 'yes' == cwcf_add_invoice() ) {
+		echo "<p><strong>" . cwcf_conditional_field_title() . ":</strong><br />" . get_post_meta( $order->get_id(), cwcf_conditional_field_title(), true ) . "</p>";
 	}
 }
 
@@ -57,8 +57,8 @@ add_action( 'woocommerce_admin_order_data_after_billing_address', 'name_display_
 
 function name_display_admin_order_meta($order){
 echo '<ul>';
-    if (get_post_meta( $order->get_id(), get_option('oizuled_conditional_fields_title'), true )) {
-		echo '<li><strong>' . get_option('oizuled_conditional_fields_title') . ':</strong><br />' . get_post_meta( $order->get_id(), get_option('oizuled_conditional_fields_title'), true ) . '</li>';
+	if ( get_post_meta( $order->get_id(), cwcf_conditional_field_title(), true ) ) {
+		echo '<li><strong>' . cwcf_conditional_field_title() . ':</strong><br />' . get_post_meta( $order->get_id(), cwcf_conditional_field_title(), true ) . '</li>';
 	}
 echo '</ul>';
 }

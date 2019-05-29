@@ -74,6 +74,9 @@ A few examples include:
 6. Custom error message displayed after the customer attempts to checkout without completing your required field.
 
 == Changelog ==
+= 1.1.0 =
+* Update: New functions for retrieving conditional field data.
+
 = 1.0.17 =
 * Updated WooCommerce compatibility.
 
@@ -129,5 +132,5 @@ A few examples include:
 * Initial release.
 
 == Upgrade Notice ==
-= 1.0.17 =
-* Updated WooCommerce compatibility.
+= 1.1.0 =
+* Update: New functions for retrieving conditional field data.

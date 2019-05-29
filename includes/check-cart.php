@@ -30,37 +30,43 @@ add_action( 'woocommerce_after_order_notes', 'conditional_checkout_field' );
 
 function conditional_checkout_field( $checkout ) {
 
-	$pid = get_option('oizuled_conditional_fields_pid');
+	$pid = cwcf_get_product_id();
 
 	$check_in_cart = conditional_product_in_cart($pid);
 
-	if (get_option('oizuled_conditional_fields_type') == 'select') {
-		$options = explode("\n", get_option('oizuled_conditional_fields_options'));
+	if ( 'select' == cwcf_get_field_type() ) {
+		$options = explode( "\n", cwcf_get_select_field_options() );
 		$select = array();
-		foreach ($options as $option) {
+		foreach ( $options as $option ) {
 			$select[$option] = $option;
 		}
 	}
 
-	$required = null;
-	if (get_option('oizuled_conditional_fields_required') == 'yes') {
-		$required = true;
-	}
-	if (get_option('oizuled_conditional_fields_required') == 'no') {
-		$required = false;
+	switch ( cwcf_required_field() ) {
+		case 'yes':
+			$required = true;
+			break;
+
+		case 'no':
+			$required = false;
+			break;
+
+		default:
+			$required = null;
+			break;
 	}
 
 	// Check if the product is in the cart and show the custom fields if it is
 	if ($check_in_cart == true ) {
 		echo '<div id="conditional_checkout_field">';
-		echo '<h3>'.get_option('oizuled_conditional_fields_title').'</h3>';
+		echo '<h3>'. cwcf_conditional_field_title() .'</h3>';
 		woocommerce_form_field( 'conditional_field', array(
-		'type'          => get_option('oizuled_conditional_fields_type'),
-		'label'         => get_option('oizuled_conditional_fields_label'),
-		'placeholder'   => (in_array(get_option('oizuled_conditional_fields_type'), array('text', 'textarea'))) ? get_option('oizuled_conditional_fields_placeholder') : null,
-		'class'         => array(get_option('oizuled_conditional_fields_class')),
-		'required'      => $required,
-		'options'		=> (get_option('oizuled_conditional_fields_type') == 'select') ? $select : null
+		'type'			=> cwcf_get_field_type(),
+		'label'			=> cwcf_get_field_label(),
+		'placeholder'	=> ( in_array( cwcf_get_field_type(), array( 'text', 'textarea' ) ) ) ? cwcf_get_field_placeholder() : null,
+		'class'			=> array( cwcf_get_field_class() ),
+		'required'		=> $required,
+		'options'		=> ( 'select' == cwcf_get_field_type() ) ? $select : null
 		), $checkout->get_value( 'conditional_field' ));
 
 		echo '</div>';

@@ -26,37 +26,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</thead>
 				<tbody>
 					<tr>
-						<td><input type="text" name="oizuled_conditional_fields_pid" size="4" value="<?php echo get_option('oizuled_conditional_fields_pid'); ?>" /></td>
-						<td><input type="text" name="oizuled_conditional_fields_title" size="10" value="<?php echo get_option('oizuled_conditional_fields_title'); ?>" /></td>
+						<td><input type="text" name="oizuled_conditional_fields_pid" size="4" value="<?php echo cwcf_get_product_id(); ?>" /></td>
+						<td><input type="text" name="oizuled_conditional_fields_title" size="10" value="<?php echo cwcf_conditional_field_title(); ?>" /></td>
 						<td>
 							<select name="oizuled_conditional_fields_type">
-								<option value="text" <?php if (get_option('oizuled_conditional_fields_type') == 'text') { echo 'selected'; } ?>><?php _e('Text Box', 'conditional-woo-checkout-field'); ?></option>
-								<option value="textarea" <?php if (get_option('oizuled_conditional_fields_type') == 'textarea') { echo 'selected'; } ?>><?php _e('Text Area', 'conditional-woo-checkout-field'); ?></option>
-								<option value="select" <?php if (get_option('oizuled_conditional_fields_type') == 'select') { echo 'selected'; } ?>><?php _e('Select Menu', 'conditional-woo-checkout-field'); ?></option>
+								<option value="text" <?php selected( cwcf_get_field_type(), 'text' ); ?>><?php _e('Text Box', 'conditional-woo-checkout-field'); ?></option>
+								<option value="textarea" <?php selected( cwcf_get_field_type(), 'textarea' ); ?>><?php _e('Text Area', 'conditional-woo-checkout-field'); ?></option>
+								<option value="select" <?php selected( cwcf_get_field_type(), 'select' ); ?>><?php _e('Select Menu', 'conditional-woo-checkout-field'); ?></option>
 							</select>
 								<hr />
 								<?php _e('Select Options', 'conditional-woo-checkout-field'); ?><br />
-								<textarea name="oizuled_conditional_fields_options" rows="3" cols="15"><?php echo get_option('oizuled_conditional_fields_options'); ?></textarea>
+								<textarea name="oizuled_conditional_fields_options" rows="3" cols="15"><?php echo cwcf_get_select_field_options(); ?></textarea>
 						</td>
-						<td><input type="text" name="oizuled_conditional_fields_label" size="10" value="<?php echo get_option('oizuled_conditional_fields_label'); ?>" /></td>
-						<td><input type="text" name="oizuled_conditional_fields_placeholder" size="10" value="<?php echo get_option('oizuled_conditional_fields_placeholder'); ?>" /></td>
-						<td><input type="text" name="oizuled_conditional_fields_class" size="10" value="<?php echo get_option('oizuled_conditional_fields_class'); ?>" /></td>
+						<td><input type="text" name="oizuled_conditional_fields_label" size="10" value="<?php echo cwcf_get_field_label(); ?>" /></td>
+						<td><input type="text" name="oizuled_conditional_fields_placeholder" size="10" value="<?php echo cwcf_get_field_placeholder(); ?>" /></td>
+						<td><input type="text" name="oizuled_conditional_fields_class" size="10" value="<?php echo cwcf_get_field_class(); ?>" /></td>
 						<td>
-							<input type="radio" name="oizuled_conditional_fields_required" value="yes" <?php if (get_option('oizuled_conditional_fields_required') == 'yes') { echo 'checked'; } ?> /> <?php _e('Yes', 'conditional-woo-checkout-field'); ?><br />
-							<input type="radio" name="oizuled_conditional_fields_required" value="no" <?php if (get_option('oizuled_conditional_fields_required') == 'no') { echo 'checked'; } ?> /> <?php _e('No', 'conditional-woo-checkout-field'); ?>
+							<input type="radio" name="oizuled_conditional_fields_required" value="yes" <?php checked( cwcf_required_field(), 'yes' ); ?> /> <?php _e('Yes', 'conditional-woo-checkout-field'); ?><br />
+							<input type="radio" name="oizuled_conditional_fields_required" value="no" <?php checked( cwcf_required_field(), 'no' ); ?> /> <?php _e('No', 'conditional-woo-checkout-field'); ?>
 						</td>
-						<td><input type="text" name="oizuled_conditional_fields_requiredtext" size="10" value="<?php echo get_option('oizuled_conditional_fields_requiredtext'); ?>" /></td>
+						<td><input type="text" name="oizuled_conditional_fields_requiredtext" size="10" value="<?php echo cwcf_required_error_text(); ?>" /></td>
 						<td>
-							<input type="checkbox" name="oizuled_conditional_fields_addemail" value="yes" <?php if (get_option('oizuled_conditional_fields_addemail') == 'yes') { echo 'checked'; } ?> /> <?php _e('Order Email', 'conditional-woo-checkout-field'); ?><br />
-							<input type="checkbox" name="oizuled_conditional_fields_addinvoice" value="yes" <?php if (get_option('oizuled_conditional_fields_addinvoice') == 'yes') { echo 'checked'; } ?> /> <?php _e('Order Invoice', 'conditional-woo-checkout-field'); ?>
+							<input type="checkbox" name="oizuled_conditional_fields_addemail" value="yes" <?php checked( cwcf_add_email(), 'yes' ); ?> /> <?php _e('Order Email', 'conditional-woo-checkout-field'); ?><br />
+							<input type="checkbox" name="oizuled_conditional_fields_addinvoice" value="yes" <?php checked( cwcf_add_invoice(), 'yes' ); ?> /> <?php _e('Order Invoice', 'conditional-woo-checkout-field'); ?>
 						</td>
 					</tr>
 				</tbody>
 				<tfoot>
 					<tr>
-						<td colspan="7"><input type="hidden" name="action" value="update" /><?php submit_button(); ?></td>
+						<td colspan="8"><input type="hidden" name="action" value="update" /><?php submit_button(); ?></td>
 						<td><a href="https://wordpress.org/support/plugin/conditional-woo-checkout-field/reviews/#new-post"><?php _e('Enjoy this plugin? Give it a 5 star rating.', 'conditional-woo-checkout-field'); ?></a></td>
-						<td><a href="https://twitter.com/scottdeluzio" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @scottdeluzio</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p></td>
 					</tr>
 					<tr>
 						<th colspan="2"><?php _e( 'Upgrade to Pro!', 'conditional-woo-checkout-field' ); ?></th>
@@ -126,7 +125,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<li>
 							<?php
 							$accountURL = get_permalink( get_option('woocommerce_myaccount_page_id') );
-							$accountLink = sprintf( wp_kses( __( 'If you want the information the customer enters to be included in their order emails or order invoice check the appropriate boxes. The order invoice is found in the customers <a href="%s">My Account</a> page on your website.','conditional-woo-checkout-field' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( $accountURL ) ); 
+							$accountLink = sprintf( wp_kses( __( 'If you want the information the customer enters to be included in their order emails or order invoice check the appropriate boxes. The order invoice is found in the customers <a href="%s">My Account</a> page on your website.','conditional-woo-checkout-field' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( $accountURL ) );
 							echo $accountLink;
 							?>
 						</li>
