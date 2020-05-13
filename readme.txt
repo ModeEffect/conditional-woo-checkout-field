@@ -3,8 +3,8 @@ Contributors: scott.deluzio
 Tags: plugin, woocommerce, checkout, custom, input, input field
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N2TYAV69U9CP4
 Requires at least: 3.1.0
-Tested up to: 5.2.1
-Stable tag: 1.1.0
+Tested up to: 5.4.1
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,7 +38,7 @@ The plugin allows you to customize this additional field's
 This plugin requires your site to have WooCommerce installed in order to work. It is not compatible with other e-commerce plugins.
 
 == Installation ==
-1. Download archive and unzip in wp-content/plugins or install via Plugins � Add New.
+1. Download archive and unzip in wp-content/plugins or install via Plugins > Add New.
 2. Activate the plugin through the Plugins menu in WordPress.
 3. In your WordPress dashboard, click on WooCommerce > Conditional Field.
 4. Enter the information for your custom field, and click Save Changes.
@@ -74,6 +74,9 @@ A few examples include:
 6. Custom error message displayed after the customer attempts to checkout without completing your required field.
 
 == Changelog ==
+= 1.2.0 =
+* Update: Enabled the use of the placeholder setting to be used as the placeholder on select menu fields. This enables the possibility of a "select an option" label shown on the select menu.
+
 = 1.1.0 =
 * Update: New functions for retrieving conditional field data.
 
@@ -93,7 +96,7 @@ A few examples include:
 = 1.0.13 =
 * Improved: File structure improved for easier debugging and future updates.
 * New: Included wpml-config.xml
-* Added: Dismissable update and rating notices.
+* Added: Dismissible update and rating notices.
 
 = 1.0.11 =
 * Minor Update
@@ -132,5 +135,5 @@ A few examples include:
 * Initial release.
 
 == Upgrade Notice ==
-= 1.1.0 =
-* Update: New functions for retrieving conditional field data.
+= 1.2.0 =
+* Update: Enabled the use of the placeholder setting to be used as the placeholder on select menu fields. This enables the possibility of a "select an option" label shown on the select menu.

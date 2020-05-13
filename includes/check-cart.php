@@ -37,6 +37,9 @@ function conditional_checkout_field( $checkout ) {
 	if ( 'select' == cwcf_get_field_type() ) {
 		$options = explode( "\n", cwcf_get_select_field_options() );
 		$select = array();
+		if ( cwcf_get_field_placeholder() ) {
+			$select[''] = cwcf_get_field_placeholder();
+		}
 		foreach ( $options as $option ) {
 			$select[$option] = $option;
 		}
@@ -57,7 +60,7 @@ function conditional_checkout_field( $checkout ) {
 	}
 
 	// Check if the product is in the cart and show the custom fields if it is
-	if ($check_in_cart == true ) {
+	if ( true == $check_in_cart ) {
 		echo '<div id="conditional_checkout_field">';
 		echo '<h3>'. cwcf_conditional_field_title() .'</h3>';
 		woocommerce_form_field( 'conditional_field', array(
