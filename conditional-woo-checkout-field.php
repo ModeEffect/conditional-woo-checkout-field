@@ -5,10 +5,10 @@
 	Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N2TYAV69U9CP4
 	Description: Display a custom field at checkout in your WooCommerce store if a certain product is in the customer's cart.
 	Requires at leas: 3.1.0
-	Tested up to: 5.8.1
-	Version: 1.2.2
+	Tested up to: 6.0.1
+	Version: 1.2.3
 	WC requires at least: 3.0.0
-	WC tested up to: 5.7.1
+	WC tested up to: 6.7.0
 	Author: AMP-MODE
 	Author URI: https://amplifyplugins.com
 	License: GPL2
